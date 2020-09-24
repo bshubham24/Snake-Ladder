@@ -6,13 +6,16 @@ public class SnakeAndLadder {
     	  final int START = 0;
     	  int dice=0;
     	  int Current = 0;
+    	  int dice_count =0;
+    	  int options;
     	  
-    	  
+    	  while(Current!=100) {
     	  dice = (int)Math.floor(Math.random()*10)%6;
     	  dice++;
+    	  dice_count++;
     	  
-    	  int options;
-    	  while(Current!=100){
+    	  
+    	  
     	  options = (int)Math.floor(Math.random()*10)%3;
     	  final int NO_PLAY = 0;
     	  final int SNAKE = 1;
@@ -23,6 +26,7 @@ public class SnakeAndLadder {
     	  switch(options) {
    
     	      case NO_PLAY:
+    	    	  System.out.println("Position after dice roll: "+Current);
     		       break;
     		   
     	      case SNAKE:
@@ -30,6 +34,7 @@ public class SnakeAndLadder {
     	    	  if(Current<START) {
     	    		  Current= 0;
     	    	  }
+    	    	  System.out.println("Position after dice roll: "+Current);
     	    	  break;
     	    	  
     	      case LADDER:
@@ -39,6 +44,8 @@ public class SnakeAndLadder {
     	    		  Current = Current - dice;
     	    		  
     	    	  }
+    	    	  System.out.println("Position after dice roll: "+Current);
+    	    	  
     	    	  
     	    	  break;
     		       
@@ -48,7 +55,7 @@ public class SnakeAndLadder {
     	  }
     
     	  }
-    	  System.out.println(Current);
+    	  System.out.println("No of times dice rolled: "+dice_count);
     	  
       }
 	}

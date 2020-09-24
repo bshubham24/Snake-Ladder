@@ -2,6 +2,7 @@ package com.capgi;
 
 public class SnakeAndLadder {
       public static void main(String[] args) {
-		System.out.println("Welcome");
+		//SINGLE PLAYER
+    	  final int START = 0;
 	}
 }

@@ -12,7 +12,7 @@ public class SnakeAndLadder {
     	  dice++;
     	  
     	  int options;
-    	  while(Current<=100){
+    	  while(Current!=100){
     	  options = (int)Math.floor(Math.random()*10)%3;
     	  final int NO_PLAY = 0;
     	  final int SNAKE = 1;
@@ -33,7 +33,13 @@ public class SnakeAndLadder {
     	    	  break;
     	    	  
     	      case LADDER:
+    	    	  
     	    	  Current = Current + dice;
+    	    	  if(Current>100) {
+    	    		  Current = Current - dice;
+    	    		  
+    	    	  }
+    	    	  
     	    	  break;
     		       
     	  

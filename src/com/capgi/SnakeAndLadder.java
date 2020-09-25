@@ -160,10 +160,10 @@ public class SnakeAndLadder {
     	  System.out.println("No of times dice rolled by Player1: "+DiceCountPlayer1);
     	  System.out.println("No of times dice rolled by Player2: "+DiceCountPlayer2);
     	  
-    	  if(DiceCountPlayer1<DiceCountPlayer2) {
+    	  if(CurrentScPlayer1==100) {
     		  System.out.println("Player1 wins!!");
     	  }
-    	  else {
+    	  else if (CurrentScPlayer2==100){
     		  System.out.println("Player2 wins!!");
     	  }
     	  
